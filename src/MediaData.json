@@ -1,10 +1,10 @@
 {
   "color": "#2C5F8D",
   "videos": [
-    "https://videos.pexels.com/video-files/9617185/9617185-uhd_2732_1440_25fps.mp4",
-    "https://videos.pexels.com/video-files/6615511/6615511-sd_426_240_25fps.mp4"
+    "assets/1.mp4",
+    "assets/2.mp4"
   ],
-  "image1": "https://images.pexels.com/photos/29253479/pexels-photo-29253479.jpeg?auto=compress&cs=tinysrgb&h=350",
-  "image2": "https://images.pexels.com/photos/6615099/pexels-photo-6615099.jpeg?auto=compress&cs=tinysrgb&h=350",
-  "image3": "https://images.pexels.com/photos/6615046/pexels-photo-6615046.jpeg?auto=compress&cs=tinysrgb&h=350"
+  "image1": "assets/1.jpeg",
+  "image2": "assets/2.jpeg",
+  "image3": "assets/3.jpeg"
 }
