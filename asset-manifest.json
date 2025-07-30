@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/carolynnwilsonarchitectltd/static/css/main.247ae6ee.css",
+    "main.js": "/carolynnwilsonarchitectltd/static/js/main.1dcbcd86.js",
+    "static/js/115.ec6cfdb7.chunk.js": "/carolynnwilsonarchitectltd/static/js/115.ec6cfdb7.chunk.js",
+    "static/js/111.372eac29.chunk.js": "/carolynnwilsonarchitectltd/static/js/111.372eac29.chunk.js",
+    "static/js/890.91f800a4.chunk.js": "/carolynnwilsonarchitectltd/static/js/890.91f800a4.chunk.js",
+    "static/media/kaushan-script-all-400-normal.woff": "/carolynnwilsonarchitectltd/static/media/kaushan-script-all-400-normal.ba623d1ca520a2a711d2.woff",
+    "static/media/sirin-stencil-all-400-normal.woff": "/carolynnwilsonarchitectltd/static/media/sirin-stencil-all-400-normal.e1b8add18154b5d65682.woff",
+    "static/media/kaushan-script-latin-400-normal.woff2": "/carolynnwilsonarchitectltd/static/media/kaushan-script-latin-400-normal.2855d49bba6b2cb7bec5.woff2",
+    "static/media/sirin-stencil-latin-400-normal.woff2": "/carolynnwilsonarchitectltd/static/media/sirin-stencil-latin-400-normal.f668f96beabdc683277b.woff2",
+    "static/media/kaushan-script-latin-ext-400-normal.woff2": "/carolynnwilsonarchitectltd/static/media/kaushan-script-latin-ext-400-normal.5a05e21384fe4b1b9db7.woff2",
+    "index.html": "/carolynnwilsonarchitectltd/index.html",
+    "main.247ae6ee.css.map": "/carolynnwilsonarchitectltd/static/css/main.247ae6ee.css.map",
+    "main.1dcbcd86.js.map": "/carolynnwilsonarchitectltd/static/js/main.1dcbcd86.js.map",
+    "115.ec6cfdb7.chunk.js.map": "/carolynnwilsonarchitectltd/static/js/115.ec6cfdb7.chunk.js.map",
+    "111.372eac29.chunk.js.map": "/carolynnwilsonarchitectltd/static/js/111.372eac29.chunk.js.map",
+    "890.91f800a4.chunk.js.map": "/carolynnwilsonarchitectltd/static/js/890.91f800a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.247ae6ee.css",
+    "static/js/main.1dcbcd86.js"
+  ]
+}
