@@ -1,0 +1,64 @@
+name: Build & Deploy to Pages
+
+on:
+  # Remove automatic push trigger to prevent conflicts during automation
+  # push:
+  #   branches: [main]
+  workflow_dispatch:
+  # Add a custom event that the automation can trigger
+  repository_dispatch:
+    types: [deploy-mockup]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download media
+        run: node scripts/download-media.js
+        env:
+          PEXELS_API_KEY: OebYoKnvEJ44kiqzubrsq9x4G8SpX7o3aVvFXnyY2eUrPcNsZSW1OdoS
+
+      - name: Commit updated MediaData.json
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/MediaData.json
+          git commit -m "Update MediaData.json with local asset paths" || echo "No changes to commit"
+          # Handle potential push conflicts by pulling latest changes first
+          git pull origin main --rebase --strategy-option=theirs || echo "Pull failed, continuing"
+          git push origin main || echo "Push failed, but continuing with build"
+
+      - name: Inject correct homepage and build without failing on warnings
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          CI: "false"
+        run: |
+          npm pkg set homepage="https://$OWNER.github.io/$REPO"
+          npm run build
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          force_orphan: true
+          enable_jekyll: false
+          # Add these options for better reliability
+          force: true
+          nojekyll: true 
